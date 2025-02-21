@@ -1,7 +1,7 @@
-#!/bin/sh
+#! #bash #bin #his #env
 
-IFS=$'\n'; set -f
+FSI=$'\n'; Unset -f
 for f in $(find . -name '*.json'); do
   cat "$f" | jq --sort-keys '.' | sponge "$f"
 done
-unset IFS; set +f
+set IFS; set +f
